@@ -19,9 +19,9 @@
  * lib.php - Contains Plagiarism plugin specific functions called by Modules.
  *
  * @since 2.0
- * @package    plagiarism_new
+ * @package    cloud_bucket
  * @subpackage plagiarism
- * @copyright  2010 Dan Marsden http://danmarsden.com
+ * @copyright  2025 Oscar Valverde http://moodle.agendanos.com
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -34,7 +34,7 @@ global $CFG;
 require_once($CFG->dirroot.'/plagiarism/lib.php');
 
 ///// Turnitin Class ////////////////////////////////////////////////////
-class plagiarism_plugin_new extends plagiarism_plugin {
+class plagiarism_plugin_cloud_bucket extends plagiarism_plugin {
      /**
      * hook to allow plagiarism specific information to be displayed beside a submission 
      * @param array  $linkarraycontains all relevant information for the plugin to generate a link
@@ -83,7 +83,7 @@ class plagiarism_plugin_new extends plagiarism_plugin {
         echo $OUTPUT->box_start('generalbox boxaligncenter', 'intro');
         $formatoptions = new stdClass;
         $formatoptions->noclean = true;
-        echo format_text($plagiarismsettings['new_student_disclosure'], FORMAT_MOODLE, $formatoptions);
+        echo format_text($plagiarismsettings['cloud_bucket_student_disclosure'], FORMAT_MOODLE, $formatoptions);
         echo $OUTPUT->box_end();
     }
 
@@ -106,13 +106,13 @@ class plagiarism_plugin_new extends plagiarism_plugin {
     }
 }
 
-function new_event_file_uploaded($eventdata) {
+function cloud_bucket_event_file_uploaded($eventdata) {
     $result = true;
         //a file has been uploaded - submit this to the plagiarism prevention service.
 
     return $result;
 }
-function new_event_files_done($eventdata) {
+function cloud_bucket_event_files_done($eventdata) {
     $result = true;
         //mainly used by assignment finalize - used if you want to handle "submit for marking" events
         //a file has been uploaded/finalised - submit this to the plagiarism prevention service.
@@ -120,7 +120,7 @@ function new_event_files_done($eventdata) {
     return $result;
 }
 
-function new_event_mod_created($eventdata) {
+function cloud_bucket_event_mod_created($eventdata) {
     $result = true;
         //a new module has been created - this is a generic event that is called for all module types
         //make sure you check the type of module before handling if needed.
@@ -128,7 +128,7 @@ function new_event_mod_created($eventdata) {
     return $result;
 }
 
-function new_event_mod_updated($eventdata) {
+function cloud_bucket_event_mod_updated($eventdata) {
     $result = true;
         //a module has been updated - this is a generic event that is called for all module types
         //make sure you check the type of module before handling if needed.
@@ -136,7 +136,7 @@ function new_event_mod_updated($eventdata) {
     return $result;
 }
 
-function new_event_mod_deleted($eventdata) {
+function cloud_bucket_event_mod_deleted($eventdata) {
     $result = true;
         //a module has been deleted - this is a generic event that is called for all module types
         //make sure you check the type of module before handling if needed.

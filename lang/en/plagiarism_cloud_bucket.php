@@ -21,10 +21,10 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['studentdisclosuredefault']  ='All files uploaded will be submitted to a plagiarism detection service';
-$string['studentdisclosure'] = 'Student Disclosure';
-$string['studentdisclosure_help'] = 'This text will be displayed to all students on the file upload page.';
-$string['newexplain'] = 'For more information on this plugin see: ';
-$string['new'] = 'New template plagiarism plugin';
-$string['usenew'] ='Enable New';
-$string['savedconfigsuccess'] = 'Plagiarism Settings Saved';
+$string['cloud_bucket_student_disclosure_default']  ='All files uploaded will be submitted to a cloud bucket service';
+$string['cloud_bucket_student_disclosure'] = 'Student Disclosure';
+$string['cloud_bucket_student_disclosure_help'] = 'This text will be displayed to all students on the file upload page.';
+$string['cloud_bucket_explain'] = 'For more information on this plugin see: ';
+$string['cloud_bucket'] = 'Cloud Bucket template plagiarism plugin';
+$string['cloud_bucket_use'] ='Enable Cloud Bucket';
+$string['cloud_bucket_saved_config_success'] = 'Cloud Bubkect Settings Saved';
